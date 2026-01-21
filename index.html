@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Srinath Yadav | Resume</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #4b6cb7, #182848);
+            color: white;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+            background-color: rgba(0, 0, 0, 0.35);
+        }
+
+        header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 38px;
+        }
+
+        header h3 {
+            margin-top: 8px;
+            font-weight: normal;
+        }
+
+        .buttons {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        button {
+            padding: 12px 22px;
+            margin: 8px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #ffffff;
+            color: #333;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #ffd166;
+        }
+
+        .section {
+            display: none;
+            background-color: rgba(255, 255, 255, 0.15);
+            margin: 25px auto;
+            padding: 25px;
+            width: 85%;
+            border-radius: 18px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background-color: rgba(0, 0, 0, 0.4);
+            font-size: 14px;
+        }
+    </style>
+
+    <script>
+        function showSection(id) {
+            let sections = document.getElementsByClassName("section");
+            for (let i = 0; i < sections.length; i++) {
+                sections[i].style.display = "none";
+            }
+            document.getElementById(id).style.display = "block";
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <!-- Replace profile.jpg with your image file name -->
+    <img src="profile[1].jpg.jpg" alt="Profile Photo">
+    <div>
+        <h1>Srinath Yadav</h1>
+        <h3>BCA Student | Web Development | Python | Intern</h3>
+    </div>
+</header>
+
+<div class="buttons">
+    <button onclick="showSection('about')">About Me</button>
+    <button onclick="showSection('skills')">Skills</button>
+    <button onclick="showSection('education')">Education</button>
+    <button onclick="showSection('contact')">Contact</button>
+</div>
+
+<div id="about" class="section">
+    <h2>About Me</h2>
+   <p>
+I am a Bachelor of Computer Applications (BCA) student with a strong foundation in
+computer applications and a growing interest in web development and Python
+programming. I enjoy creating structured, visually appealing web pages and
+continuously improving my technical skills through hands-on practice.
+</p>
+
+<p>
+I have experience building basic web projects using HTML, CSS, and JavaScript,
+and I am comfortable working with Python for logic building and problem solving.
+Through my academic learning and practical exposure, I have developed a clear
+understanding of how technology can be applied to solve real-world problems.
+</p>
+
+<p>
+I am motivated, detail-oriented, and eager to learn new tools and technologies.
+I am looking for opportunities that allow me to grow as a developer, gain
+industry exposure, and contribute positively to a professional environment.
+</p>
+</div>
+
+<div id="skills" class="section">
+    <h2>Skills</h2>
+    <ul>
+        <li>HTML & CSS</li>
+        <li>Python Programming</li>
+        <li>Basic JavaScript</li>
+        <li>Git & GitHub</li>
+    </ul>
+</div>
+
+<div id="education" class="section">
+    <h2>Education</h2>
+    <p><strong>Bachelor of Computer Applications (BCA)</strong></p>
+    <p>Indus Valley Degree College</p>
+    <p>Bengaluru North University</p>
+</div>
+
+<div id="contact" class="section">
+    <h2>Contact Details</h2>
+    <p><strong>Email:</strong> srinathsrinsth195@gmail.com</p>
+    <p><strong>LinkedIn:</strong> Srinath (Yadav) C</p>
+    <p><strong>GitHub:</strong> srinathyadav46</p>
+</div>
+
+<footer>
+    Internship Experience: IMTDA INFOTECH PVT LIMITED
+</footer>
+
+</body>
+</html>
