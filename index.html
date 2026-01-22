@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <title>Srinath Yadav | Resume</title>
 
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             background: linear-gradient(135deg, #4b6cb7, #182848);
             color: white;
         }
@@ -32,11 +35,12 @@
         header h1 {
             margin: 0;
             font-size: 38px;
+            font-weight: 600;
         }
 
         header h3 {
             margin-top: 8px;
-            font-weight: normal;
+            font-weight: 400;
         }
 
         .buttons {
@@ -45,19 +49,22 @@
         }
 
         button {
-            padding: 12px 22px;
+            padding: 12px 24px;
             margin: 8px;
             border: none;
-            border-radius: 25px;
-            font-size: 16px;
+            border-radius: 30px;
+            font-size: 15px;
             cursor: pointer;
-            background-color: #ffffff;
-            color: #333;
-            transition: 0.3s;
+            font-family: 'Poppins', sans-serif;
+
+            background: linear-gradient(135deg, #ff8a00, #e52e71);
+            color: white;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
 
         button:hover {
-            background-color: #ffd166;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
         }
 
         .section {
@@ -67,6 +74,16 @@
             padding: 25px;
             width: 85%;
             border-radius: 18px;
+
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .section.show {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
         }
 
         ul {
@@ -75,10 +92,11 @@
 
         .edu-title {
             cursor: pointer;
-            padding: 10px;
+            padding: 12px;
             background-color: rgba(255, 255, 255, 0.2);
-            border-radius: 8px;
+            border-radius: 10px;
             margin-top: 12px;
+            font-weight: 500;
         }
 
         .edu-title:hover {
@@ -104,9 +122,16 @@
         function showSection(id) {
             let sections = document.getElementsByClassName("section");
             for (let i = 0; i < sections.length; i++) {
+                sections[i].classList.remove("show");
                 sections[i].style.display = "none";
             }
-            document.getElementById(id).style.display = "block";
+
+            let activeSection = document.getElementById(id);
+            activeSection.style.display = "block";
+
+            setTimeout(() => {
+                activeSection.classList.add("show");
+            }, 10);
         }
 
         function toggleEdu(id) {
@@ -122,7 +147,6 @@
 <body>
 
 <header>
-    <!-- Make sure image name is exactly profile.jpg -->
     <img src="profile[1].jpg" alt="Profile Photo">
     <div>
         <h1>Srinath Yadav</h1>
@@ -140,15 +164,13 @@
 <div id="about" class="section">
     <h2>About Me</h2>
     <p>
-        I am a Bachelor of Computer Applications (BCA) student with a strong foundation
-        in computer applications and a growing interest in web development and Python
-        programming. I enjoy building clean and structured web pages and improving my
-        skills through hands-on practice.
+        I am a Bachelor of Computer Applications (BCA) student with a strong interest in
+        web development and Python programming. I enjoy creating clean, structured, and
+        visually appealing web pages through hands-on practice.
     </p>
     <p>
-        I have experience working with HTML, CSS, basic JavaScript, and Python.
-        I am motivated, detail-oriented, and eager to learn new technologies and gain
-        real-world industry exposure.
+        I am motivated, detail-oriented, and eager to learn new technologies while
+        gaining real-world industry exposure.
     </p>
 </div>
 
@@ -159,10 +181,9 @@
         <li>Responsive Web Design</li>
         <li>Basic JavaScript</li>
         <li>Python Programming</li>
-        <li>Problem Solving with Python</li>
+        <li>Problem Solving</li>
         <li>Basic Machine Learning Concepts</li>
         <li>Git & GitHub</li>
-        <li>Basic Data Structures</li>
         <li>Logical Thinking</li>
         <li>Team Collaboration</li>
     </ul>
@@ -171,26 +192,20 @@
 <div id="education" class="section">
     <h2>Education</h2>
 
-    <p class="edu-title" onclick="toggleEdu('bca')">
-        <strong>Bachelor of Computer Applications (BCA)</strong>
-    </p>
+    <p class="edu-title" onclick="toggleEdu('bca')">Bachelor of Computer Applications (BCA)</p>
     <div id="bca" class="edu-details">
         <p><b>CGPA:</b> 7.5</p>
         <p>Indus Valley Degree College</p>
         <p>Bengaluru North University</p>
     </div>
 
-    <p class="edu-title" onclick="toggleEdu('puc')">
-        <strong>PUC</strong>
-    </p>
+    <p class="edu-title" onclick="toggleEdu('puc')">PUC</p>
     <div id="puc" class="edu-details">
         <p><b>Percentage:</b> 69.5%</p>
         <p>Samruddi PU and Degree College</p>
     </div>
 
-    <p class="edu-title" onclick="toggleEdu('sslc')">
-        <strong>SSLC</strong>
-    </p>
+    <p class="edu-title" onclick="toggleEdu('sslc')">SSLC</p>
     <div id="sslc" class="edu-details">
         <p><b>Percentage:</b> 90.08%</p>
         <p>Smt Vasanthi Venugopal High School</p>
