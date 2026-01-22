@@ -69,6 +69,28 @@
             border-radius: 18px;
         }
 
+        ul {
+            padding-left: 20px;
+        }
+
+        .edu-title {
+            cursor: pointer;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            margin-top: 12px;
+        }
+
+        .edu-title:hover {
+            background-color: rgba(255, 255, 255, 0.35);
+        }
+
+        .edu-details {
+            display: none;
+            margin-left: 15px;
+            margin-top: 8px;
+        }
+
         footer {
             text-align: center;
             padding: 20px;
@@ -76,24 +98,8 @@
             background-color: rgba(0, 0, 0, 0.4);
             font-size: 14px;
         }
-        .edu-title {
-    cursor: pointer;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
-    margin-top: 12px;
-}
-
-.edu-title:hover {
-    background-color: rgba(255, 255, 255, 0.35);
-}
-
-.edu-details {
-    display: none;
-    margin-left: 15px;
-    margin-top: 8px;
-}
     </style>
+
     <script>
         function showSection(id) {
             let sections = document.getElementsByClassName("section");
@@ -102,27 +108,25 @@
             }
             document.getElementById(id).style.display = "block";
         }
-        <script>
-    function toggleEdu(id) {
-        let allDetails = document.getElementsByClassName("edu-details");
 
-        for (let i = 0; i < allDetails.length; i++) {
-            allDetails[i].style.display = "none";
+        function toggleEdu(id) {
+            let allDetails = document.getElementsByClassName("edu-details");
+            for (let i = 0; i < allDetails.length; i++) {
+                allDetails[i].style.display = "none";
+            }
+            document.getElementById(id).style.display = "block";
         }
-
-        document.getElementById(id).style.display = "block";
-    }
     </script>
 </head>
 
 <body>
 
 <header>
-    <!-- Replace profile.jpg with your image file name -->
-    <img src="profile[1].jpg" alt="Profile Photo">
+    <!-- Make sure image name is exactly profile.jpg -->
+    <img src="profile.jpg" alt="Profile Photo">
     <div>
         <h1>Srinath Yadav</h1>
-        <h3>BCA Student | Web Development | Python | Intern</h3>
+        <h3>BCA Student | Web Development | Python</h3>
     </div>
 </header>
 
@@ -135,26 +139,19 @@
 
 <div id="about" class="section">
     <h2>About Me</h2>
-   <p>
-I am a Bachelor of Computer Applications (BCA) student with a strong foundation in
-computer applications and a growing interest in web development and Python
-programming. I enjoy creating structured, visually appealing web pages and
-continuously improving my technical skills through hands-on practice.
-</p>
-
-<p>
-I have experience building basic web projects using HTML, CSS, and JavaScript,
-and I am comfortable working with Python for logic building and problem solving.
-Through my academic learning and practical exposure, I have developed a clear
-understanding of how technology can be applied to solve real-world problems.
-</p>
-
-<p>
-I am motivated, detail-oriented, and eager to learn new tools and technologies.
-I am looking for opportunities that allow me to grow as a developer, gain
-industry exposure, and contribute positively to a professional environment.
-</p>
+    <p>
+        I am a Bachelor of Computer Applications (BCA) student with a strong foundation
+        in computer applications and a growing interest in web development and Python
+        programming. I enjoy building clean and structured web pages and improving my
+        skills through hands-on practice.
+    </p>
+    <p>
+        I have experience working with HTML, CSS, basic JavaScript, and Python.
+        I am motivated, detail-oriented, and eager to learn new technologies and gain
+        real-world industry exposure.
+    </p>
 </div>
+
 <div id="skills" class="section">
     <h2>Skills</h2>
     <ul>
@@ -167,11 +164,10 @@ industry exposure, and contribute positively to a professional environment.
         <li>Git & GitHub</li>
         <li>Basic Data Structures</li>
         <li>Logical Thinking</li>
-        <li>Debugging & Code Improvement</li>
-        <li>Time Management</li>
         <li>Team Collaboration</li>
     </ul>
 </div>
+
 <div id="education" class="section">
     <h2>Education</h2>
 
@@ -199,6 +195,8 @@ industry exposure, and contribute positively to a professional environment.
         <p><b>Percentage:</b> 90.08%</p>
         <p>Smt Vasanthi Venugopal High School</p>
     </div>
+</div>
+
 <div id="contact" class="section">
     <h2>Contact Details</h2>
     <p><strong>Email:</strong> srinathsrinsth195@gmail.com</p>
